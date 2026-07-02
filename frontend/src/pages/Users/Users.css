@@ -1,0 +1,97 @@
+.users-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.add-user-btn{
+background:#2563eb;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.search-bar{
+background:white;
+padding:15px;
+display:flex;
+align-items:center;
+gap:10px;
+border-radius:10px;
+margin-bottom:25px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.search-bar input{
+border:none;
+outline:none;
+width:100%;
+}
+
+.users-table{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#0f172a;
+color:white;
+padding:15px;
+}
+
+td{
+padding:15px;
+border-bottom:1px solid #e5e7eb;
+}
+
+.active{
+background:#16a34a;
+color:white;
+padding:5px 10px;
+border-radius:20px;
+}
+
+.inactive{
+background:#dc2626;
+color:white;
+padding:5px 10px;
+border-radius:20px;
+}
+
+td button{
+margin-right:8px;
+border:none;
+padding:8px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.view{
+background:#2563eb;
+color:white;
+}
+
+.edit{
+background:#f59e0b;
+color:white;
+}
+
+.share{
+background:#16a34a;
+color:white;
+}
+
+.delete{
+background:#dc2626;
+color:white;
+}

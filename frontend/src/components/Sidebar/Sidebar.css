@@ -1,0 +1,93 @@
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #0f172a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding: 25px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.logo h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.logo span {
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+  flex: 1;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: .3s;
+  font-size: 15px;
+}
+
+.sidebar ul li:hover {
+  background: #2563eb;
+}
+
+
+/* Sidebar Icons Black */
+
+.sidebar ul li svg,
+.profile svg,
+.bottom-menu button svg {
+    color: #000;
+}
+
+
+
+
+.bottom-menu {
+  padding: 20px;
+  border-top: 1px solid #1e293b;
+}
+
+.profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile svg {
+  font-size: 35px;
+}
+
+.profile h5 {
+  margin: 0;
+}
+
+.profile small {
+  color: #94a3b8;
+}
+
+.bottom-menu button {
+  width: 100%;
+  border: none;
+  padding: 12px;
+  background: #dc2626;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
