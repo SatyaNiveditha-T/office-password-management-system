@@ -20,6 +20,17 @@ export default function OTP() {
     return () => clearInterval(interval);
   }, [timer]);
 
+  useEffect(() => {
+    try {
+      const user = JSON.parse(localStorage.getItem("user") || "null");
+      if (user?.isSuperAdmin) {
+        navigate("/");
+      }
+    } catch (e) {
+      // ignore
+    }
+  }, [navigate]);
+
   const handleChange = (value, index) => {
     if (!/^\d?$/.test(value)) return;
 

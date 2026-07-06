@@ -1,3 +1,5 @@
+
+import api from "../../api/axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -25,17 +27,40 @@ export default function Login() {
     });
   };
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleLogin = async (e) => {
+  e.preventDefault();
 
-    if (!form.email || !form.password) {
-      alert("Please enter Email and Password");
-      return;
+  if (!form.email || !form.password) {
+    alert("Please enter Email and Password");
+    return;
+  }
+
+  try {
+    const response = await api.post("/auth/login", {
+  email: form.email,
+  password: form.password,
+});
+
+    console.log(response.data);
+
+    localStorage.setItem("token", response.data.token);
+    localStorage.setItem("user", JSON.stringify(response.data.user));
+
+    alert("Login Successful");
+
+    // If Super Admin, skip OTP and go directly to dashboard
+    if (response.data.user?.isSuperAdmin) {
+      navigate("/");
+    } else {
+      navigate("/otp");
     }
 
-    // Backend API will be connected later
-    navigate("/otp");
-  };
+
+    
+  } catch (error) {
+    alert(error.response?.data?.message || "Login Failed");
+  }
+};
 
   return (
     <div className="login-page">

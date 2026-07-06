@@ -9,7 +9,7 @@ import DataEntry from "./pages/DataEntry/DataEntry";
 import PasswordManagement from "./pages/PasswordManagement/PasswordManagement";
 import Settings from "./pages/Settings/Settings";
 import AuditLog from "./pages/AuditLog/AuditLog";
-
+import AddUser from "./pages/Users/AddUser";
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
 <Route path="/password-management" element={<PasswordManagement />} />
 <Route path="/settings" element={<Settings />} />
 <Route path="/audit-log" element={<AuditLog />} />
+<Route path="/users/add" element={<AddUser />} />
     </Routes>
   );
 }
